@@ -4,10 +4,11 @@
 
 pip install pytubefix
 pip install ffmpeg-python
+pip install pandas
 
 
 // Check if installs worked
 
-python -c "import pytubefix, ffmpeg; print('OK')"
+python -c "import pytubefix, ffmpeg, pandas; print('OK')"
 
 https://www.youtube.com/watch?v=3BFTio5296w
