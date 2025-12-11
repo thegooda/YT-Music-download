@@ -5,6 +5,7 @@
 pip install pytubefix
 pip install ffmpeg-python
 pip install pandas
+pip install nodejs-wheel
 
 
 // Check if installs worked
