@@ -4,7 +4,6 @@ import pytubefix
 import ffmpeg
 import time
 import random
-import pandas as pd
 from datetime import datetime
 from pytubefix import Playlist
 from pytubefix import YouTube
