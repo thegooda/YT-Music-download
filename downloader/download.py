@@ -1,6 +1,5 @@
 import sys
 import os
-import pytubefix
 import ffmpeg
 import time
 import random
@@ -8,11 +7,16 @@ from datetime import datetime
 from pytubefix import Playlist
 from pytubefix import YouTube
 
-def music_download(folder_path, youtube_url, file_type):
+def music_download(folder_path, youtube_url, file_type, set_total_callback=None, progress_callback=None):
     if "list=" in youtube_url:
 
         yt_pl = Playlist(youtube_url)
-        print(f"Found {len(yt_pl.video_urls)} videos")
+        total = len(yt_pl.video_urls)
+        
+        if set_total_callback:
+            set_total_callback(total)
+        
+        print(f"Found {total} videos")
         
         count = 1
         for video_url in yt_pl.video_urls:
@@ -37,6 +41,9 @@ def music_download(folder_path, youtube_url, file_type):
                 with open('Error.txt', 'a') as file:
                     file.write(error_line)
             
+            if progress_callback:
+                progress_callback(count)
+            
             if count % 10 == 0:
                 cooldown = random.uniform(20, 40)
                 print(f"\nCooling down for {cooldown:.1f} sec to avoid rate limits…")
@@ -46,7 +53,11 @@ def music_download(folder_path, youtube_url, file_type):
             time.sleep(random.uniform(4, 7.5))
         
     else:    #if single video 
-        # Create a Yotube Object and fetch the stream URL 
+        # Create a Yotube Object and fetch the stream URL
+        
+        if set_total_callback:
+            set_total_callback(1)
+        
         print('Downloading audio from single youtube video...')
         yt = YouTube(youtube_url, client='WEB')
         
@@ -54,3 +65,8 @@ def music_download(folder_path, youtube_url, file_type):
         print('Fetching audio stream...')
         stream = yt.streams.get_audio_only()
         stream.download(output_path=folder_path, skip_existing=True)
+        
+        if progress_callback:
+            progress_callback(1)
+        
+    
