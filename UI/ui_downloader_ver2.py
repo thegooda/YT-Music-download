@@ -42,26 +42,23 @@ class Ui_MainWindow(object):
         self.Browse.setGeometry(QRect(470, 140, 100, 30))
         self.download_button = QPushButton(self.centralwidget)
         self.download_button.setObjectName(u"download_button")
-        self.download_button.setGeometry(QRect(70, 250, 500, 50))
+        self.download_button.setGeometry(QRect(70, 240, 500, 50))
         self.Title = QTextBrowser(self.centralwidget)
         self.Title.setObjectName(u"Title")
         self.Title.setGeometry(QRect(70, 20, 500, 50))
         self.progressBar = QProgressBar(self.centralwidget)
         self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setGeometry(QRect(70, 380, 500, 30))
+        self.progressBar.setGeometry(QRect(70, 340, 500, 30))
         self.progressBar.setValue(0)
         self.status_label = QTextBrowser(self.centralwidget)
         self.status_label.setObjectName(u"status_label")
-        self.status_label.setGeometry(QRect(180, 340, 280, 30))
+        self.status_label.setGeometry(QRect(180, 300, 280, 30))
         self.Title_folder = QTextBrowser(self.centralwidget)
         self.Title_folder.setObjectName(u"Title_folder")
         self.Title_folder.setGeometry(QRect(70, 140, 100, 30))
         self.Title_link = QTextBrowser(self.centralwidget)
         self.Title_link.setObjectName(u"Title_link")
         self.Title_link.setGeometry(QRect(70, 100, 100, 30))
-        self.cancel_button = QPushButton(self.centralwidget)
-        self.cancel_button.setObjectName(u"cancel_button")
-        self.cancel_button.setGeometry(QRect(230, 310, 181, 21))
         self.Title_index = QTextBrowser(self.centralwidget)
         self.Title_index.setObjectName(u"Title_index")
         self.Title_index.setGeometry(QRect(70, 180, 100, 30))
@@ -111,7 +108,6 @@ class Ui_MainWindow(object):
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">Link:</span></p></body></html>", None))
-        self.cancel_button.setText(QCoreApplication.translate("MainWindow", u"Cancel", None))
         self.Title_index.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
