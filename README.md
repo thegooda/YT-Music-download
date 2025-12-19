@@ -22,6 +22,13 @@ Users can download videos or audio-only by providing a link to a video or playli
 1. Install dependencies: `pip install -r requirements.txt`
 2. Run the application: `python main.py`
 
+### Building UI Files
+
+1. Edit the `.ui` file in Qt Creator
+2. Build the `.py` file from the `.ui`:
+    - (Bash): `pyside6-uic ./UI/downloader_ver2.ui -o ./UI/ui_downloader_ver2.py`
+    - (CMD): `pyside6-uic .\UI\downloader_ver2.ui -o .\UI\ui_downloader_ver2.py`
+
 ## Contributors
 
 - Project and technical lead: [thegooda](https://github.com/thegooda)
