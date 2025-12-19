@@ -112,3 +112,4 @@
 2025-12-13 02:07:42.670398 | https://www.youtube.com/watch?v=QdZTdedUxxQ | QdZTdedUxxQ This request was detected as a bot. DO NOT OPEN AN ISSUE! See more details at https://pytubefix.readthedocs.io/en/latest/user/po_token.html
 2025-12-13 02:08:13.727464 | https://www.youtube.com/watch?v=m1G_TMtnXF0 | m1G_TMtnXF0 This request was detected as a bot. DO NOT OPEN AN ISSUE! See more details at https://pytubefix.readthedocs.io/en/latest/user/po_token.html
 2025-12-17 14:05:06.736362 | https://www.youtube.com/watch?v=QYa0r3AVKaI | SABR Maximum reload attempts reached. Stream protection status: PoToken OK
+2025-12-19 12:34:28.029756 | https://www.youtube.com/watch?v=QYa0r3AVKaI | SABR Maximum reload attempts reached. Stream protection status: PoToken OK

@@ -18,4 +18,4 @@ https://www.youtube.com/watch?v=3BFTio5296w
 
 pyinstaller --noconsole --onefile main.py
 
-pyside6-uic .\UI\downloader_ver1.ui -o .\UI\ui_downloader_ver2.py
+pyside6-uic .\UI\downloader_ver2.ui -o .\UI\ui_downloader_ver2.py
