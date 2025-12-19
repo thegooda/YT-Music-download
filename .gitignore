@@ -1,6 +1,10 @@
 __pycache__/
 UI/__pycache__/
 downloader/__pycache__/
+dist/
+build/
+
+*.spec
 
 *.m4a
 *.mp3
