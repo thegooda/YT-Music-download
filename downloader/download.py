@@ -7,19 +7,22 @@ from datetime import datetime
 from pytubefix import Playlist
 from pytubefix import YouTube
 
-def music_download(folder_path, youtube_url, file_type, set_total_callback=None, progress_callback=None):
+def music_download(folder_path, youtube_url, file_type, start_index, set_total_callback=None, progress_callback=None):
     if "list=" in youtube_url:
 
-        yt_pl = Playlist(youtube_url)
-        total = len(yt_pl.video_urls)
+        urls = list(Playlist(youtube_url).video_urls)[start_index - 1:]
+        if progress_callback:
+            progress_callback(0)
+        
+        total = len(urls)
         
         if set_total_callback:
             set_total_callback(total)
         
-        print(f"Found {total} videos")
+        print(f"Found {total} videos, starting at playlist index {start_index}")
         
-        count = 1
-        for video_url in yt_pl.video_urls:
+        count = start_index
+        for video_url in urls:
             try:
                 yt = YouTube(video_url, client='WEB')
                 print(f"Downloading: {count}- {yt.title}")         
@@ -42,7 +45,7 @@ def music_download(folder_path, youtube_url, file_type, set_total_callback=None,
                     file.write(error_line)
             
             if progress_callback:
-                progress_callback(count)
+                progress_callback(count - start_index + 1)
             
             if count % 10 == 0:
                 cooldown = random.uniform(20, 40)
@@ -69,4 +72,4 @@ def music_download(folder_path, youtube_url, file_type, set_total_callback=None,
         if progress_callback:
             progress_callback(1)
         
-    
+print("finish downloading")
