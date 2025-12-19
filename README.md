@@ -1,0 +1,25 @@
+# YT Music Download
+
+## Features
+
+Users can download videos or audio-only by providing a link to a video or playlist to a desktop application.
+
+## Limitations
+
+- This application has not been tested on Mac OS or Linux systems
+- For playlists of 400+ videos, downloads may be interrupted due to bot detection. This is a known issue. [See this article for details.](https://pytubefix.readthedocs.io/en/latest/user/po_token.html) 
+
+## Contributors
+
+- Project and technical lead: [thegooda](https://github.com/thegooda)
+- Project support: [thesamuraiwho](https://github.com/thesamuraiwho)
+
+## License
+
+This project is licensed under the MIT license.
+
+## Sources and Additional Licenses
+
+This project uses the following code and licenses:
+
+- Qt Community under the [LGPL license](https://www.qt.io/development/download-open-source)
